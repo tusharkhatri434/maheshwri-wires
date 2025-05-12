@@ -4,13 +4,15 @@ interface SectionHeadingProps {
   subtitle?: string;
   alignment?: "left" | "center" | "right";
   className?: string;
-  id?: string; // Added id prop for anchor linking
+  id?: string;
+  textColor?:string // Added id prop for anchor linking
 }
 const SectionHeading = ({
   title,
   subtitle,
   alignment = "center",
   className,
+  textColor="text-zinc-900",
   id // Accept id for anchor purposes
 }: SectionHeadingProps) => {
   return <div id={id} // Add the id attribute for anchor linking
@@ -21,7 +23,7 @@ const SectionHeading = ({
     "text-center": alignment === "center",
     "text-right": alignment === "right"
   }, className)}>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 py-[15px] md:py-[20px] text-zinc-900">
+      <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 py-[15px] md:py-[20px] ${textColor}`}>
         {title}
       </h2>
       {subtitle && <p className="text-sm sm:text-base text-yellow-500 font-semibold md:text-xl">

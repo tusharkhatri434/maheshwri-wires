@@ -162,6 +162,7 @@ const Foundation = () => {
             title="Crafting Performance at Scale" 
             subtitle="At Maheshwari Wires, capability isn't just about machines — it's about mindset" 
             className="text-white"
+            textColor="text-white"
           />
           
           <div className="max-w-3xl mx-auto mb-10">
